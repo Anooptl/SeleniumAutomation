@@ -1,6 +1,7 @@
 package com.allianz.tabs;
 
 import java.time.Duration;
+import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +18,9 @@ public class Demo1 {
         driver.get("https://db4free.net");
         
         //click on phpMyAdmin »
-        driver.findElement(By.partialLinkText("phpMyAdmin"));
+        driver.findElement(By.partialLinkText("phpMyAdmin")).click();
+        ArrayList<String> windows = new ArrayList<String>(driver.getWindowHandles());
+        
 
 	}
 
